@@ -45,11 +45,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.txtpcode = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(213, 297);
+            this.txtPrice.Location = new System.Drawing.Point(213, 309);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(462, 33);
             this.txtPrice.TabIndex = 36;
@@ -128,7 +129,7 @@
             "Bird",
             "Fish",
             "Food"});
-            this.cbCategory.Location = new System.Drawing.Point(213, 171);
+            this.cbCategory.Location = new System.Drawing.Point(213, 214);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(462, 33);
             this.cbCategory.TabIndex = 34;
@@ -138,19 +139,19 @@
             // 
             this.lblPcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPcode.AutoSize = true;
-            this.lblPcode.Location = new System.Drawing.Point(13, 357);
+            this.lblPcode.Location = new System.Drawing.Point(13, 106);
             this.lblPcode.Name = "lblPcode";
-            this.lblPcode.Size = new System.Drawing.Size(68, 26);
+            this.lblPcode.Size = new System.Drawing.Size(129, 25);
             this.lblPcode.TabIndex = 48;
-            this.lblPcode.Text = "pcode";
+            this.lblPcode.Text = "Mã sản phẩm";
             this.lblPcode.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 297);
+            this.label6.Location = new System.Drawing.Point(13, 317);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 26);
+            this.label6.Size = new System.Drawing.Size(56, 25);
             this.label6.TabIndex = 47;
             this.label6.Text = "Giá :";
             // 
@@ -162,15 +163,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 239);
+            this.label5.Location = new System.Drawing.Point(13, 269);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 26);
+            this.label5.Size = new System.Drawing.Size(103, 25);
             this.label5.TabIndex = 46;
             this.label5.Text = "Số lượng :";
             // 
             // txtQty
             // 
-            this.txtQty.Location = new System.Drawing.Point(213, 236);
+            this.txtQty.Location = new System.Drawing.Point(213, 261);
             this.txtQty.Name = "txtQty";
             this.txtQty.Size = new System.Drawing.Size(462, 33);
             this.txtQty.TabIndex = 35;
@@ -178,18 +179,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 171);
+            this.label3.Location = new System.Drawing.Point(13, 222);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 26);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 44;
             this.label3.Text = "Loại :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 106);
+            this.label2.Location = new System.Drawing.Point(13, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 26);
+            this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 43;
             this.label2.Text = "Tên :";
             // 
@@ -215,15 +216,23 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(214, 103);
+            this.txtName.Location = new System.Drawing.Point(214, 160);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(462, 33);
             this.txtName.TabIndex = 32;
+            // 
+            // txtpcode
+            // 
+            this.txtpcode.Location = new System.Drawing.Point(213, 106);
+            this.txtpcode.Name = "txtpcode";
+            this.txtpcode.Size = new System.Drawing.Size(462, 33);
+            this.txtpcode.TabIndex = 49;
             // 
             // ProductModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(708, 406);
+            this.Controls.Add(this.txtpcode);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCancel);
@@ -241,7 +250,7 @@
             this.Controls.Add(this.txtName);
             this.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProductModule";
@@ -272,5 +281,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtpcode;
     }
 }
