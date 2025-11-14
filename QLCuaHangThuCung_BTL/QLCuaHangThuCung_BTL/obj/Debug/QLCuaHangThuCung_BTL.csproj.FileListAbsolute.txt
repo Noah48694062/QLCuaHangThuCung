@@ -29,3 +29,22 @@ D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\b
 D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.pdb
 D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\Guna.UI2.dll
 D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHan.CE4C6C1D.Up2Date
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.exe.config
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.exe
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.pdb
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\Guna.UI2.dll
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.csproj.AssemblyReference.cache
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.exe.config
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Cash.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.CashCustomer.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.CashProduct.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Loading.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.MainForm.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.ProductForm.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.ProductModule.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Properties.Resources.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.csproj.GenerateResource.cache
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.csproj.CoreCompileInputs.cache
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHan.CE4C6C1D.Up2Date
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.exe
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.pdb

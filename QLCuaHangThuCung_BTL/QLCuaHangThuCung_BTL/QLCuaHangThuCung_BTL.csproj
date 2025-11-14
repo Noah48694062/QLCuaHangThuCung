@@ -52,6 +52,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cash.Designer.cs">
+      <DependentUpon>Cash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashCustomer.Designer.cs">
+      <DependentUpon>CashCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashProduct.Designer.cs">
+      <DependentUpon>CashProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +96,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Cash.resx">
+      <DependentUpon>Cash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashCustomer.resx">
+      <DependentUpon>CashCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashProduct.resx">
+      <DependentUpon>CashProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -106,6 +142,60 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\8.jpg" />
+    <Content Include="images\add_301px.png" />
+    <Content Include="images\add_30px.png" />
+    <Content Include="images\bird_50px.png" />
+    <Content Include="images\cancel_301px.png" />
+    <Content Include="images\cancel_30px.png" />
+    <Content Include="images\cat_30px.png" />
+    <Content Include="images\cat_50px.png" />
+    <Content Include="images\cat_cage_301px.png" />
+    <Content Include="images\cat_cage_30px.png" />
+    <Content Include="images\Check Circle_20px.png" />
+    <Content Include="images\clown_fish_202px.png" />
+    <Content Include="images\customer_301px.png" />
+    <Content Include="images\customer_30px.png" />
+    <Content Include="images\dashboard_layout_301px.png" />
+    <Content Include="images\dashboard_layout_30px.png" />
+    <Content Include="images\Delete_20px.png" />
+    <Content Include="images\Delete_30px.png" />
+    <Content Include="images\dog_100px.png" />
+    <Content Include="images\dog_50px.png" />
+    <Content Include="images\down_20px.png" />
+    <Content Include="images\down_25px.png" />
+    <Content Include="images\edit_20px.png" />
+    <Content Include="images\edit_30px.png" />
+    <Content Include="images\fish_201px.png" />
+    <Content Include="images\fish_203px.png" />
+    <Content Include="images\fish_20px.png" />
+    <Content Include="images\flying_stork_with_bundle_50px.png" />
+    <Content Include="images\group_301px.png" />
+    <Content Include="images\group_30px.png" />
+    <Content Include="images\icons8_shiba_inu.ico" />
+    <Content Include="images\icons8_shiba_inu_32.png" />
+    <Content Include="images\Logout_301px.png" />
+    <Content Include="images\Logout_30px.png" />
+    <Content Include="images\parrot_202px.png" />
+    <Content Include="images\parrot_20px.png" />
+    <Content Include="images\peacock_20px.png" />
+    <Content Include="images\peacock_50px.png" />
+    <Content Include="images\pexels-bill-emrich-230785.jpg" />
+    <Content Include="images\pexels-burst-374898.jpg" />
+    <Content Include="images\pexels-chevanon-photography-1108099.jpg" />
+    <Content Include="images\pexels-gilberto-reyes-825949.jpg" />
+    <Content Include="images\popular_48px.png" />
+    <Content Include="images\sale_50px.png" />
+    <Content Include="images\search_30px.png" />
+    <Content Include="images\security_lock_30px.png" />
+    <Content Include="images\tropical_fish_20px.png" />
+    <Content Include="images\up_20px.png" />
+    <Content Include="images\up_25px.png" />
+    <Content Include="images\user_30px.png" />
+    <Content Include="images\us_dollar_301px.png" />
+    <Content Include="images\us_dollar_30px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
