@@ -1,0 +1,16 @@
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.exe.config
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.exe
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\QLCuaHangThuCung_BTL.pdb
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\bin\Debug\Guna.UI2.dll
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.csproj.AssemblyReference.cache
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.MainForm.resources
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Properties.Resources.resources
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.csproj.GenerateResource.cache
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.csproj.CoreCompileInputs.cache
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHan.CE4C6C1D.Up2Date
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.exe
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.pdb
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.exe.config
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Login.resources
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.ProductForm.resources
+D:\LapTrinhTrucQuan\BTL_LTTQ1\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.ProductModule.resources
