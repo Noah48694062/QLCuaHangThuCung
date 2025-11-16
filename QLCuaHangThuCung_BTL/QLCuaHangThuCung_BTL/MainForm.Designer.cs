@@ -64,7 +64,6 @@
             this.btnProduct = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7.SuspendLayout();
@@ -352,7 +351,7 @@
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(1151, -1);
             this.btnClose.Name = "btnClose";
@@ -391,7 +390,6 @@
             this.panel2.Controls.Add(this.btnProduct);
             this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.btnCustomer);
-            this.panel2.Controls.Add(this.btnDashboard);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 65);
@@ -403,9 +401,9 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 409);
+            this.panel5.Location = new System.Drawing.Point(0, 364);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(6, 161);
+            this.panel5.Size = new System.Drawing.Size(6, 206);
             this.panel5.TabIndex = 9;
             // 
             // btnLogout
@@ -446,17 +444,18 @@
             this.btnCash.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnCash.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnCash.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnCash.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.Image")));
             this.btnCash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCash.Location = new System.Drawing.Point(0, 364);
+            this.btnCash.Location = new System.Drawing.Point(0, 319);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(194, 45);
             this.btnCash.TabIndex = 6;
             this.btnCash.Text = "Tài chính";
             this.btnCash.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // btnProduct
             // 
@@ -475,13 +474,14 @@
             this.btnProduct.Image = ((System.Drawing.Image)(resources.GetObject("btnProduct.Image")));
             this.btnProduct.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnProduct.Location = new System.Drawing.Point(0, 319);
+            this.btnProduct.Location = new System.Drawing.Point(0, 274);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(194, 45);
             this.btnProduct.TabIndex = 5;
             this.btnProduct.Text = "Sản phẩm";
             this.btnProduct.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnProduct.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // btnUser
             // 
@@ -497,17 +497,18 @@
             this.btnUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.btnUser.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnUser.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnUser.Image = ((System.Drawing.Image)(resources.GetObject("btnUser.Image")));
             this.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnUser.Location = new System.Drawing.Point(0, 274);
+            this.btnUser.Location = new System.Drawing.Point(0, 229);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(194, 45);
             this.btnUser.TabIndex = 4;
             this.btnUser.Text = "Người dùng";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnCustomer
             // 
@@ -526,38 +527,14 @@
             this.btnCustomer.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomer.Image")));
             this.btnCustomer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnCustomer.Location = new System.Drawing.Point(0, 229);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 184);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(194, 45);
             this.btnCustomer.TabIndex = 3;
             this.btnCustomer.Text = "Khách hàng";
             this.btnCustomer.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomer.TextOffset = new System.Drawing.Point(10, 0);
-            // 
-            // btnDashboard
-            // 
-            this.btnDashboard.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDashboard.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDashboard.FillColor = System.Drawing.Color.Transparent;
-            this.btnDashboard.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.ForeColor = System.Drawing.Color.DarkGray;
-            this.btnDashboard.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.btnDashboard.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.btnDashboard.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            this.btnDashboard.Image = ((System.Drawing.Image)(resources.GetObject("btnDashboard.Image")));
-            this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnDashboard.Location = new System.Drawing.Point(0, 184);
-            this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(194, 45);
-            this.btnDashboard.TabIndex = 2;
-            this.btnDashboard.Text = "Trang chủ";
-            this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDashboard.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // panel4
             // 
@@ -644,7 +621,6 @@
         private Guna.UI2.WinForms.Guna2Button btnProduct;
         public Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnCustomer;
-        private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.Label lblUsername;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
