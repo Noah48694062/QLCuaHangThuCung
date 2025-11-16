@@ -117,7 +117,7 @@ namespace QLCuaHangThuCung_BTL
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            LoadProduct();
+         
         }
 
         // ============================
@@ -220,6 +220,11 @@ namespace QLCuaHangThuCung_BTL
             module.btnUpdate.Enabled = false;
 
             module.ShowDialog();
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            LoadProduct();
         }
     }
 }

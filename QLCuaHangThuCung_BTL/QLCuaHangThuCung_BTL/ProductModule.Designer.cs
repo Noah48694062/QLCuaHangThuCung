@@ -154,7 +154,6 @@
             this.lblPcode.Size = new System.Drawing.Size(141, 25);
             this.lblPcode.TabIndex = 48;
             this.lblPcode.Text = "Mã sản phẩm :";
-            this.lblPcode.Visible = false;
             // 
             // label6
             // 
