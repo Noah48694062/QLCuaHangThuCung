@@ -29,31 +29,37 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductModule));
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtGiaBan = new System.Windows.Forms.TextBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.cbLoai = new System.Windows.Forms.ComboBox();
             this.lblPcode = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.label5 = new System.Windows.Forms.Label();
-            this.txtQty = new System.Windows.Forms.TextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtpcode = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbNSX = new System.Windows.Forms.ComboBox();
+            this.txtGiaNhap = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // txtPrice
+            // txtGiaBan
             // 
-            this.txtPrice.Location = new System.Drawing.Point(213, 309);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(462, 33);
-            this.txtPrice.TabIndex = 36;
+            this.txtGiaBan.Location = new System.Drawing.Point(213, 265);
+            this.txtGiaBan.Name = "txtGiaBan";
+            this.txtGiaBan.Size = new System.Drawing.Size(462, 33);
+            this.txtGiaBan.TabIndex = 36;
             // 
             // btnClose
             // 
@@ -74,6 +80,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 34);
             this.btnClose.TabIndex = 40;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnCancel
             // 
@@ -82,12 +89,13 @@
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(536, 361);
+            this.btnCancel.Location = new System.Drawing.Point(536, 486);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(139, 41);
             this.btnCancel.TabIndex = 39;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -97,12 +105,13 @@
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(375, 361);
+            this.btnUpdate.Location = new System.Drawing.Point(375, 486);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(139, 41);
             this.btnUpdate.TabIndex = 38;
             this.btnUpdate.Text = "Cập nhật";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // btnSave
             // 
@@ -111,49 +120,50 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(214, 361);
+            this.btnSave.Location = new System.Drawing.Point(214, 486);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(139, 41);
             this.btnSave.TabIndex = 37;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
             // 
-            // cbCategory
+            // cbLoai
             // 
-            this.cbCategory.DisplayMember = "0";
-            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Items.AddRange(new object[] {
+            this.cbLoai.DisplayMember = "0";
+            this.cbLoai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbLoai.FormattingEnabled = true;
+            this.cbLoai.Items.AddRange(new object[] {
             "Dog",
             "Cat",
             "Bird",
             "Fish",
             "Food"});
-            this.cbCategory.Location = new System.Drawing.Point(213, 214);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(462, 33);
-            this.cbCategory.TabIndex = 34;
-            this.cbCategory.Tag = "1";
+            this.cbLoai.Location = new System.Drawing.Point(213, 175);
+            this.cbLoai.Name = "cbLoai";
+            this.cbLoai.Size = new System.Drawing.Size(462, 33);
+            this.cbLoai.TabIndex = 34;
+            this.cbLoai.Tag = "1";
             // 
             // lblPcode
             // 
             this.lblPcode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPcode.AutoSize = true;
-            this.lblPcode.Location = new System.Drawing.Point(13, 106);
+            this.lblPcode.Location = new System.Drawing.Point(13, 87);
             this.lblPcode.Name = "lblPcode";
-            this.lblPcode.Size = new System.Drawing.Size(129, 25);
+            this.lblPcode.Size = new System.Drawing.Size(141, 25);
             this.lblPcode.TabIndex = 48;
-            this.lblPcode.Text = "Mã sản phẩm";
+            this.lblPcode.Text = "Mã sản phẩm :";
             this.lblPcode.Visible = false;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(13, 317);
+            this.label6.Location = new System.Drawing.Point(13, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 25);
+            this.label6.Size = new System.Drawing.Size(93, 25);
             this.label6.TabIndex = 47;
-            this.label6.Text = "Giá :";
+            this.label6.Text = "Giá bán :";
             // 
             // guna2Elipse1
             // 
@@ -163,23 +173,23 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 269);
+            this.label5.Location = new System.Drawing.Point(12, 223);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 25);
             this.label5.TabIndex = 46;
             this.label5.Text = "Số lượng :";
             // 
-            // txtQty
+            // txtSoLuong
             // 
-            this.txtQty.Location = new System.Drawing.Point(213, 261);
-            this.txtQty.Name = "txtQty";
-            this.txtQty.Size = new System.Drawing.Size(462, 33);
-            this.txtQty.TabIndex = 35;
+            this.txtSoLuong.Location = new System.Drawing.Point(213, 223);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(462, 33);
+            this.txtSoLuong.TabIndex = 35;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 222);
+            this.label3.Location = new System.Drawing.Point(13, 175);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 44;
@@ -188,7 +198,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 160);
+            this.label2.Location = new System.Drawing.Point(13, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 25);
             this.label2.TabIndex = 43;
@@ -214,40 +224,104 @@
             this.panel1.Size = new System.Drawing.Size(708, 14);
             this.panel1.TabIndex = 41;
             // 
-            // txtName
+            // txtTen
             // 
-            this.txtName.Location = new System.Drawing.Point(214, 160);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(462, 33);
-            this.txtName.TabIndex = 32;
+            this.txtTen.Location = new System.Drawing.Point(213, 130);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(462, 33);
+            this.txtTen.TabIndex = 32;
             // 
-            // txtpcode
+            // txtID
             // 
-            this.txtpcode.Location = new System.Drawing.Point(213, 106);
-            this.txtpcode.Name = "txtpcode";
-            this.txtpcode.Size = new System.Drawing.Size(462, 33);
-            this.txtpcode.TabIndex = 49;
+            this.txtID.Location = new System.Drawing.Point(213, 87);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(462, 33);
+            this.txtID.TabIndex = 49;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(13, 354);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(138, 25);
+            this.label4.TabIndex = 51;
+            this.label4.Text = "Nhà sản xuất :";
+            // 
+            // cbNSX
+            // 
+            this.cbNSX.DisplayMember = "0";
+            this.cbNSX.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNSX.FormattingEnabled = true;
+            this.cbNSX.Items.AddRange(new object[] {
+            "Dog",
+            "Cat",
+            "Bird",
+            "Fish",
+            "Food"});
+            this.cbNSX.Location = new System.Drawing.Point(213, 354);
+            this.cbNSX.Name = "cbNSX";
+            this.cbNSX.Size = new System.Drawing.Size(462, 33);
+            this.cbNSX.TabIndex = 52;
+            this.cbNSX.Tag = "1";
+            // 
+            // txtGiaNhap
+            // 
+            this.txtGiaNhap.Location = new System.Drawing.Point(213, 308);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.Size = new System.Drawing.Size(462, 33);
+            this.txtGiaNhap.TabIndex = 53;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(13, 308);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(103, 25);
+            this.label7.TabIndex = 54;
+            this.label7.Text = "Giá nhập :";
+            // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Location = new System.Drawing.Point(213, 405);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(462, 33);
+            this.txtMoTa.TabIndex = 55;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(13, 405);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(76, 25);
+            this.label8.TabIndex = 56;
+            this.label8.Text = "Mô tả :";
             // 
             // ProductModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(708, 406);
-            this.Controls.Add(this.txtpcode);
-            this.Controls.Add(this.txtPrice);
+            this.ClientSize = new System.Drawing.Size(708, 531);
+            this.Controls.Add(this.txtMoTa);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtGiaNhap);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.cbNSX);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtGiaBan);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.cbCategory);
+            this.Controls.Add(this.cbLoai);
             this.Controls.Add(this.lblPcode);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtQty);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtTen);
             this.Font = new System.Drawing.Font("Times New Roman", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -265,22 +339,28 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox txtPrice;
+        public System.Windows.Forms.TextBox txtGiaBan;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.Button btnCancel;
         public System.Windows.Forms.Button btnUpdate;
         public System.Windows.Forms.Button btnSave;
-        public System.Windows.Forms.ComboBox cbCategory;
+        public System.Windows.Forms.ComboBox cbLoai;
         public System.Windows.Forms.Label lblPcode;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox txtQty;
+        public System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.TextBox txtName;
-        public System.Windows.Forms.TextBox txtpcode;
+        public System.Windows.Forms.TextBox txtTen;
+        public System.Windows.Forms.TextBox txtID;
+        public System.Windows.Forms.ComboBox cbNSX;
+        private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.TextBox txtMoTa;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox txtGiaNhap;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -1,105 +1,169 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
+﻿using QLCuaHangThuCung_BTL;
+using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Management;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QLCuaHangThuCung_BTL
 {
-    partial class ProductModule : Form
+    public partial class ProductModule : Form
     {
-        public ProductModule()
+        DBConnect db = new DBConnect();
+        ProductForm parent;
+        bool check = false;
+
+        public ProductModule(ProductForm form)
         {
             InitializeComponent();
-            //this.Text = String.Format("About {0}", AssemblyTitle);
-            //this.labelProductName.Text = AssemblyProduct;
-            //this.labelVersion.Text = String.Format("Version {0}", AssemblyVersion);
-            //this.labelCopyright.Text = AssemblyCopyright;
-            //this.labelCompanyName.Text = AssemblyCompany;
-            //this.textBoxDescription.Text = AssemblyDescription;
+            parent = form;
+
+            LoadLoaiSP();
+            LoadNSX();
         }
 
-        #region Assembly Attribute Accessors
-
-        public string AssemblyTitle
+        private void LoadLoaiSP()
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0)
-                {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
-                    {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-            }
+            DataTable dt = db.GetData("SELECT * FROM LoaiSanPham");
+            cbLoai.DataSource = dt;
+            cbLoai.DisplayMember = "LoaiSP";
+            cbLoai.ValueMember = "IDLoaiSP";
         }
 
-        public string AssemblyVersion
+        private void LoadNSX()
         {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
+            DataTable dt = db.GetData("SELECT * FROM NhaSanXuat");
+            cbNSX.DataSource = dt;
+            cbNSX.DisplayMember = "TenNSX";
+            cbNSX.ValueMember = "IDNSX";
         }
 
-        public string AssemblyDescription
+        private void btnSave_Click(object sender, EventArgs e)
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
-            }
+            
         }
 
-        public string AssemblyProduct
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
-            }
+            //string query = @"
+            //    UPDATE SanPham SET 
+            //        TenSanPham=@ten,
+            //        IDLoaiSP=@loai,
+            //        IDNSX=@nsx,
+            //        GiaNhap=@gianhap,
+            //        GiaBan=@giaban,
+            //        SoLuong=@soluong,
+            //        MoTa=@mota
+            //    WHERE IDSanPham=@id";
+
+            //db.Execute(query,
+            //    new SqlParameter("@id", txtID.Text),
+            //    new SqlParameter("@ten", txtTen.Text),
+            //    new SqlParameter("@loai", cbLoai.SelectedValue),
+            //    new SqlParameter("@nsx", cbNSX.SelectedValue),
+            //    new SqlParameter("@giaban", decimal.Parse(txtGiaBan.Text)),
+            //    new SqlParameter("@soluong", int.Parse(txtSoLuong.Text))
+                
+            //);
+
+            //MessageBox.Show("Đã cập nhật!");
+            //parent.LoadProduct();
+            //this.Close();
         }
 
-        public string AssemblyCopyright
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
-            }
+            Clear();
         }
 
-        public string AssemblyCompany
+
+        #region Method
+        public void Clear()
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
-            }
+            txtID.Clear();
+            txtTen.Clear();
+            txtGiaBan.Clear();
+            txtGiaNhap.Clear();
+            txtMoTa.Clear();
+            txtSoLuong.Clear();
+
+            if (cbLoai.Items.Count > 0)
+                cbLoai.SelectedIndex = 0;
+
+            if (cbNSX.Items.Count > 0)
+                cbNSX.SelectedIndex = 0;
+
+            btnUpdate.Enabled = false;
         }
-        #endregion
+
+        public void CheckField()
+        {
+            if (txtTen.Text == "" | txtGiaBan.Text == "" | txtSoLuong.Text == "" | txtID.Text == "" | txtGiaNhap.Text == "")
+            {
+                MessageBox.Show("Required data field!", "Warning");
+                return;
+            }
+            check = true;
+        }
+
+        #endregion Method
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void btnSave_Click_1(object sender, EventArgs e)
+        {
+            string query = @"
+            INSERT INTO SanPham(IDSanPham, TenSanPham, IDLoaiSP, IDNSX, GiaNhap, GiaBan, SoLuong, MoTa)
+            VALUES (@id, @ten, @loai, @nsx, @gianhap, @giaban, @soluong, @mota)";
+
+            db.Execute(query,
+                new SqlParameter("@id", txtID.Text),
+                new SqlParameter("@ten", txtTen.Text),
+                new SqlParameter("@loai", cbLoai.SelectedValue),
+                new SqlParameter("@nsx", cbNSX.SelectedValue),
+                new SqlParameter("@gianhap", decimal.Parse(txtGiaNhap.Text)),
+                new SqlParameter("@giaban", decimal.Parse(txtGiaBan.Text)),
+                new SqlParameter("@soluong", int.Parse(txtSoLuong.Text)),
+                new SqlParameter("@mota", string.IsNullOrWhiteSpace(txtMoTa.Text) ? (object)DBNull.Value : txtMoTa.Text)
+            );
+
+            MessageBox.Show("Đã thêm sản phẩm!");
+            parent.LoadProduct();
+            this.Close();
+        }
+
+        private void btnUpdate_Click_1(object sender, EventArgs e)
+        {
+            string query = @"
+            UPDATE SanPham SET 
+                TenSanPham=@ten,
+                IDLoaiSP=@loai,
+                IDNSX=@nsx,
+                GiaNhap=@gianhap,
+                GiaBan=@giaban,
+                SoLuong=@soluong,
+                MoTa=@mota
+            WHERE IDSanPham=@id";
+
+            db.Execute(query,
+                new SqlParameter("@id", txtID.Text),
+                new SqlParameter("@ten", txtTen.Text),
+                new SqlParameter("@loai", cbLoai.SelectedValue),
+                new SqlParameter("@nsx", cbNSX.SelectedValue),
+                new SqlParameter("@gianhap", decimal.Parse(txtGiaNhap.Text)),
+                new SqlParameter("@giaban", decimal.Parse(txtGiaBan.Text)),
+                new SqlParameter("@soluong", int.Parse(txtSoLuong.Text)),
+                new SqlParameter("@mota", string.IsNullOrWhiteSpace(txtMoTa.Text) ? (object)DBNull.Value : txtMoTa.Text)
+            );
+
+            MessageBox.Show("Đã cập nhật!");
+            parent.LoadProduct();
+            this.Close();
+        }
     }
 }
