@@ -85,14 +85,18 @@
             // 
             this.guna2ProgressBar1.Location = new System.Drawing.Point(103, 256);
             this.guna2ProgressBar1.Name = "guna2ProgressBar1";
+            this.guna2ProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.guna2ProgressBar1.Size = new System.Drawing.Size(567, 30);
             this.guna2ProgressBar1.TabIndex = 8;
             this.guna2ProgressBar1.Text = "guna2ProgressBar1";
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // guna2CirclePictureBox1
             // 
-            //this.guna2CirclePictureBox1.Image = global::QLCuaHangThuCung_BTL.Properties.Resources.pexels_bill_emrich_230785;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(121, 105);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -116,6 +120,7 @@
             this.Name = "Loading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.Loading_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
