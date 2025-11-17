@@ -352,7 +352,7 @@
             this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(1151, -1);
             this.btnClose.Name = "btnClose";
@@ -457,6 +457,7 @@
             this.btnCash.Text = "Tài chính";
             this.btnCash.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // btnProduct
             // 

@@ -16,5 +16,22 @@ namespace QLCuaHangThuCung_BTL
         {
             InitializeComponent();
         }
+        int startPoint = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            startPoint += 2;
+            guna2ProgressBar1.Value = startPoint;
+            if(guna2ProgressBar1.Value == 100)
+            {
+                guna2ProgressBar1.Value = 0;
+                timer1.Stop();
+                this.Close();
+            }
+        }
+
+        private void Loading_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
     }
 }

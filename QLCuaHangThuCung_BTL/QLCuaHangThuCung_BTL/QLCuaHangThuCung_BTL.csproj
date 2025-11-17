@@ -82,6 +82,7 @@
     <Compile Include="CustomerModule.Designer.cs">
       <DependentUpon>CustomerModule.cs</DependentUpon>
     </Compile>
+    <Compile Include="DbConnect.cs" />
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
     </Compile>

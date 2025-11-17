@@ -72,3 +72,8 @@ D:\LT Trực Quan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj
 D:\LT Trực Quan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Login.resources
 D:\LT Trực Quan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.UserForm.resources
 D:\LT Trực Quan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.UserModule.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.CustomerForm.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.CustomerModule.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Login.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.UserForm.resources
+D:\New folder (4)\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.UserModule.resources

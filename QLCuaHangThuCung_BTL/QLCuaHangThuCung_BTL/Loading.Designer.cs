@@ -66,7 +66,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            this.label1.Location = new System.Drawing.Point(193, 124);
+            this.label1.Location = new System.Drawing.Point(221, 124);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 64);
             this.label1.TabIndex = 6;
@@ -90,9 +90,12 @@
             this.guna2ProgressBar1.Text = "guna2ProgressBar1";
             this.guna2ProgressBar1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // guna2CirclePictureBox1
             // 
-            //this.guna2CirclePictureBox1.Image = global::QLCuaHangThuCung_BTL.Properties.Resources.pexels_bill_emrich_230785;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(121, 105);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
@@ -116,6 +119,7 @@
             this.Name = "Loading";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loading";
+            this.Load += new System.EventHandler(this.Loading_Load);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
