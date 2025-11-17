@@ -123,5 +123,15 @@ namespace QLCuaHangThuCung_BTL
         {
             openChildForm(new Cash());
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Logout Application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Login login = new Login();
+                this.Dispose();
+                login.ShowDialog();
+            }
+        }
     }
 }

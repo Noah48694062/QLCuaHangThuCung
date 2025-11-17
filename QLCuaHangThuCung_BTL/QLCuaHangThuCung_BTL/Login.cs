@@ -26,72 +26,18 @@ namespace QLCuaHangThuCung_BTL
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //string query = @"
-            //SELECT TK.TenDangNhap, VT.TenVaiTro
-            //FROM TaiKhoan AS TK
-            //JOIN VaiTro AS VT ON TK.IDRole = VT.IDRole
-            //WHERE TK.TenDangNhap = @name AND TK.MatKhau = @password";
-
-            //SqlParameter[] parameters =
-            //{
-            //    new SqlParameter("@name", txtname.Text),
-            //    new SqlParameter("@password", txtpass.Text) // So sánh mật khẩu plain text
-            //};
-
-            //try
-            //{
-            //    // 3. Gọi GetData để thực thi truy vấn
-            //    DataTable dt = db.GetData(query, parameters);
-
-            //    // 4. Kiểm tra kết quả (nếu có 1 hàng trả về là đúng)
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        // Lấy dữ liệu từ hàng đầu tiên tìm thấy
-            //        string _name = dt.Rows[0]["TenDangNhap"].ToString();
-            //        string _role = dt.Rows[0]["TenVaiTro"].ToString(); // Tên vai trò (vd: 'Admin')
-
-            //        MessageBox.Show("Chào mừng " + _name + " |", "ĐĂNG NHẬP THÀNH CÔNG", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            //        // 5. Mở MainForm và truyền dữ liệu
-            //        MainForm main = new MainForm();
-            //        main.lblUsername.Text = _name;
-            //        main.lblRole.Text = _role;
-
-            //        // Kiểm tra vai trò để bật/tắt chức năng
-            //        if (_role == "Admin") // Tên vai trò phải khớp với CSDL
-            //        {
-            //            main.btnUser.Enabled = true; // (Thay btnUser bằng tên nút của bạn)
-            //        }
-
-            //        this.Hide();
-            //        main.ShowDialog();
-
-            //        // Cân nhắc: Có thể thêm this.Close() ở đây nếu muốn đóng form login
-            //    }
-            //    else
-            //    {
-            //        // Thông báo lỗi
-            //        MessageBox.Show("Tên đăng nhập hoặc mật khẩu không hợp lệ!", "ĐĂNG NHẬP THẤT BẠI", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    // Lỗi hệ thống chung (lớp DBConnect đã báo lỗi SQL rồi)
-            //    MessageBox.Show("Lỗi hệ thống khi đăng nhập: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            
-
             string query = @"
-            SELECT TK.TenDangNhap, VT.TenVaiTro
-            FROM TaiKhoan AS TK
-            JOIN VaiTro AS VT ON TK.IDRole = VT.IDRole
-            WHERE TK.TenDangNhap = @name AND TK.MatKhau = @password";
+        SELECT TK.TenDangNhap, VT.TenVaiTro, KH.IDKhachHang
+        FROM TaiKhoan AS TK
+        JOIN VaiTro AS VT ON TK.IDRole = VT.IDRole
+        LEFT JOIN KhachHang AS KH ON TK.IDTaiKhoan = KH.IDTaiKhoan
+        WHERE TK.TenDangNhap = @name AND TK.MatKhau = @password";
 
             SqlParameter[] parameters =
             {
-                new SqlParameter("@name", txtname.Text),
-                new SqlParameter("@password", txtpass.Text)
-            };
+        new SqlParameter("@name", txtname.Text),
+        new SqlParameter("@password", txtpass.Text)
+    };
 
             try
             {
@@ -112,25 +58,29 @@ namespace QLCuaHangThuCung_BTL
                     // ===================================
                     if (_role == "Admin")
                     {
-                        // 1. Nếu là Admin -> Mở MainForm
+                        // 1. Nếu là Admin -> Mở MainForm (Phần này đã đúng)
                         MainForm main = new MainForm();
                         main.lblUsername.Text = _name;
                         main.lblRole.Text = _role;
-                        main.btnUser.Enabled = true; // (Ví dụ: bật nút quản lý user)
+                        main.btnUser.Enabled = true;
 
                         main.ShowDialog();
                     }
                     else if (_role == "Khách hàng")
                     {
-                        // 2. Nếu là Khách hàng -> Mở CustomerMainForm
-                        // (Bạn phải tạo một Form mới tên là CustomerMainForm)
+                        // ===================================
+                        // == SỬA LỖI CHÍNH Ở ĐÂY ==
+                        // ===================================
 
-                        // CustomerMainForm customerForm = new CustomerMainForm();
-                        // customerForm.lblWelcome.Text = "Chào mừng, " + _name; // (Ví dụ)
-                        // customerForm.ShowDialog();
+                        // 2. Lấy ID Khách Hàng (bạn đã select nhưng chưa dùng)
+                        string _idKhachHang = dt.Rows[0]["IDKhachHang"].ToString();
 
-                        // Do form chưa có, tạm thời thông báo:
-                        MessageBox.Show("Đăng nhập với tư cách Khách hàng thành công.");
+                        // 3. Truyền Tên VÀ ID sang CustomerMainForm (theo constructor ta đã sửa)
+                        CustomerMainForm customerForm = new CustomerMainForm(_name, _idKhachHang);
+                        customerForm.ShowDialog();
+
+                        // 4. Bỏ MessageBox này đi, vì form mới đã hiện lên
+                        // MessageBox.Show("Đăng nhập với tư cách Khách hàng thành công.");
                     }
                     else
                     {

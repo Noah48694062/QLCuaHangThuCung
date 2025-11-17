@@ -16,7 +16,7 @@ namespace QLCuaHangThuCung_BTL
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Loading());
+            Application.Run(new Login());
         }
     }
 }
