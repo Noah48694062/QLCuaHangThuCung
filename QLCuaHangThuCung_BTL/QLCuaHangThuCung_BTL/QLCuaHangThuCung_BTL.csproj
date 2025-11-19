@@ -89,11 +89,29 @@
       <DependentUpon>CustomerModule.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_MuaSam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_MuaSam.Designer.cs">
       <DependentUpon>Form_MuaSam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationForm.Designer.cs">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationModule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationModule.Designer.cs">
+      <DependentUpon>InformationModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -157,8 +175,17 @@
     <EmbeddedResource Include="CustomerModule.resx">
       <DependentUpon>CustomerModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_MuaSam.resx">
       <DependentUpon>Form_MuaSam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationForm.resx">
+      <DependentUpon>InformationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationModule.resx">
+      <DependentUpon>InformationModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>

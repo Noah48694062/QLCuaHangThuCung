@@ -109,3 +109,6 @@ D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHa
 D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHan.CE4C6C1D.Up2Date
 D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.exe
 D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.pdb
+D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Form1.resources
+D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.InformationForm.resources
+D:\LT Trực Quan\file clone mới\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.InformationModule.resources

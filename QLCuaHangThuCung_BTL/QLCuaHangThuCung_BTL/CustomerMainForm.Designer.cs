@@ -117,7 +117,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label6.Location = new System.Drawing.Point(108, 137);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(252, 33);
+            this.label6.Size = new System.Drawing.Size(200, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Bienvenido, amigo mío";
             // 
@@ -128,7 +128,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label8.Location = new System.Drawing.Point(90, 93);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 32);
+            this.label8.Size = new System.Drawing.Size(57, 25);
             this.label8.TabIndex = 6;
             this.label8.Text = "H2M";
             // 
@@ -160,6 +160,7 @@
             this.panelChild.Name = "panelChild";
             this.panelChild.Size = new System.Drawing.Size(990, 300);
             this.panelChild.TabIndex = 11;
+            this.panelChild.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChild_Paint);
             // 
             // lblTitle
             // 
@@ -177,7 +178,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(63, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 21);
+            this.label2.Size = new System.Drawing.Size(121, 19);
             this.label2.TabIndex = 8;
             this.label2.Text = "Chó mèo là bạn";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +189,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(63, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 23);
+            this.label1.Size = new System.Drawing.Size(40, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "H2M";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -314,7 +315,7 @@
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(194, 45);
             this.btnTaiKhoan.TabIndex = 6;
-            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.Text = "Thông tin";
             this.btnTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTaiKhoan.TextOffset = new System.Drawing.Point(10, 0);
             this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);

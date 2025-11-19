@@ -14,141 +14,83 @@ namespace QLCuaHangThuCung_BTL
         private DBConnect db = new DBConnect();
         private Form activeForm = null;
 
-        // 1. Biến để LƯU TRỮ ID và Tên của khách hàng
         private string currentIDKhachHang;
         private string currentTenNguoiDung;
-        //public CustomerMainForm()
-        //{
-        //    InitializeComponent();
-
-        //}
 
         public CustomerMainForm(string tenNguoiDung, string idKhachHang)
         {
             InitializeComponent();
 
-            // 4. Lưu thông tin khách hàng lại
             this.currentIDKhachHang = idKhachHang;
             this.currentTenNguoiDung = tenNguoiDung;
 
-            // 5. Hiển thị tên lên các Label (Giả sử CMainForm có các Label này)
-            // (Nếu bạn kế thừa từ MainForm, các Label này đã có sẵn)
-            if (this.Controls.ContainsKey("lblUsername"))
-            {
-                (this.Controls["lblUsername"] as Label).Text = tenNguoiDung;
-            }
-            if (this.Controls.ContainsKey("lblRole"))
-            {
-                (this.Controls["lblRole"] as Label).Text = "Khách hàng";
-            }
+            SetupSidebarInfo(tenNguoiDung);
         }
+
+        private void SetupSidebarInfo(string tenHienThi)
+        {
+            lblUsername.Text = tenHienThi;
+            lblRole.Text = "Khách hàng";
+            lblTitle.Text = "Chào mừng, " + tenHienThi.Split(' ')[0];
+        }
+
 
         public void openChildForm(Form childForm)
         {
+            // 1. Đóng form con đang hoạt động (activeForm) và GIẢI PHÓNG tài nguyên
             if (activeForm != null)
-                activeForm.Close();
+            {
+                activeForm.Dispose(); // Sử dụng Dispose() để giải phóng hoàn toàn bộ nhớ
+            }
 
+            // 2. Ẩn Dash Panel (nếu có)
+            // Cần đảm bảo panelDash đã được khai báo trong Designer
+            // panelDash.Visible = false;
+
+            // 3. Thiết lập form con mới
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
 
-            lblTitle.Text = childForm.Text;
+            // 4. Nhúng form vào panel chứa
+            // Cần đảm bảo panelChild đã được khai báo trong Designer
             panelChild.Controls.Clear();
             panelChild.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
+
+            // 5. Cập nhật tiêu đề (Giả định lblTitle tồn tại)
+            // lblTitle.Text = childForm.Text.ToUpper();
         }
 
-
-        #region Assembly Attribute Accessors
-
-        public string AssemblyTitle
+        // ===============================================
+        // LOGIC XỬ LÝ NÚT THÔNG TIN TÀI KHOẢN
+        // ===============================================
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyTitleAttribute), false);
-                if (attributes.Length > 0)
-                {
-                    AssemblyTitleAttribute titleAttribute = (AssemblyTitleAttribute)attributes[0];
-                    if (titleAttribute.Title != "")
-                    {
-                        return titleAttribute.Title;
-                    }
-                }
-                return System.IO.Path.GetFileNameWithoutExtension(Assembly.GetExecutingAssembly().CodeBase);
-            }
+            this.lblTitle.Text = "THÔNG TIN CÁ NHÂN";
+
+            // Mở InformationForm và TRUYỀN ID KHÁCH HÀNG ĐANG ĐĂNG NHẬP
+            // Chú ý: Dùng constructor mới InformationForm(string customerID)
+            InformationForm profileForm = new InformationForm(this.currentIDKhachHang);
+
+            openChildForm(profileForm);
         }
 
-        public string AssemblyVersion
-        {
-            get
-            {
-                return Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            }
-        }
-
-        public string AssemblyDescription
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyDescriptionAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyDescriptionAttribute)attributes[0]).Description;
-            }
-        }
-
-        public string AssemblyProduct
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyProductAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyProductAttribute)attributes[0]).Product;
-            }
-        }
-
-        public string AssemblyCopyright
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCopyrightAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCopyrightAttribute)attributes[0]).Copyright;
-            }
-        }
-
-        public string AssemblyCompany
-        {
-            get
-            {
-                object[] attributes = Assembly.GetExecutingAssembly().GetCustomAttributes(typeof(AssemblyCompanyAttribute), false);
-                if (attributes.Length == 0)
-                {
-                    return "";
-                }
-                return ((AssemblyCompanyAttribute)attributes[0]).Company;
-            }
-        }
-        #endregion
+        // ... (Các hàm khác giữ nguyên)
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Logout Application?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc chắn muốn đăng xuất?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Login login = new Login();
                 this.Dispose();
@@ -163,17 +105,19 @@ namespace QLCuaHangThuCung_BTL
 
         private void btnGioHang_Click(object sender, EventArgs e)
         {
-
+            lblTitle.Text = "GIỎ HÀNG";
         }
 
         private void btnLichSu_Click(object sender, EventArgs e)
         {
-
+            lblTitle.Text = "LỊCH SỬ MUA HÀNG";
         }
 
-        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        private void panelChild_Paint(object sender, PaintEventArgs e)
         {
-
+            // Để trống
         }
+
+        // ... (Phần Assembly Accessors giữ nguyên)
     }
 }
