@@ -165,5 +165,10 @@ namespace QLCuaHangThuCung_BTL
             parent.LoadProduct();
             this.Close();
         }
+
+        private void ProductModule_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace QLCuaHangThuCung_BTL
     public class DBConnect
     {
         //private string connectionString = @"Data Source=msitoiyeu;Initial Catalog=QLCuaHangThuCung1;Integrated Security=True;Trust Server Certificate=True";
-        private readonly string connectionString = @"Data Source=msitoiyeu;Initial Catalog=QLCuaHangThuCung1;Integrated Security=True";
+        private readonly string connectionString = @"Data Source=DESKTOP-M1JOGNG\SQLEXPRESS;Initial Catalog=QLCuaHangThuCung1;Integrated Security=True";
 
         // Lấy đối tượng SqlConnection
         private SqlConnection GetConnection()
