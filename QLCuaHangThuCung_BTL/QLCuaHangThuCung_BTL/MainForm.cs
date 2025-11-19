@@ -122,7 +122,7 @@ namespace QLCuaHangThuCung_BTL
 
         private void btnCash_Click(object sender, EventArgs e)
         {
-            openChildForm(new Cash());
+            openChildForm(new Cash(this));
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
