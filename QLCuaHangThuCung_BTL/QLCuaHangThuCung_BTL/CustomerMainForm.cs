@@ -37,31 +37,22 @@ namespace QLCuaHangThuCung_BTL
 
         public void openChildForm(Form childForm)
         {
-            // 1. Đóng form con đang hoạt động (activeForm) và GIẢI PHÓNG tài nguyên
             if (activeForm != null)
-            {
-                activeForm.Dispose(); // Sử dụng Dispose() để giải phóng hoàn toàn bộ nhớ
-            }
+                activeForm.Close();
 
-            // 2. Ẩn Dash Panel (nếu có)
-            // Cần đảm bảo panelDash đã được khai báo trong Designer
-            // panelDash.Visible = false;
+            panelDash.Visible = false; // Ẩn Dash panel
 
-            // 3. Thiết lập form con mới
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
 
-            // 4. Nhúng form vào panel chứa
-            // Cần đảm bảo panelChild đã được khai báo trong Designer
             panelChild.Controls.Clear();
             panelChild.Controls.Add(childForm);
             childForm.BringToFront();
             childForm.Show();
 
-            // 5. Cập nhật tiêu đề (Giả định lblTitle tồn tại)
-            // lblTitle.Text = childForm.Text.ToUpper();
+            lblTitle.Text = childForm.Text.ToUpper();
         }
 
         // ===============================================
