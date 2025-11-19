@@ -83,3 +83,5 @@ D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\o
 D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.UserModule.resources
 D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.CustomerMainForm.resources
 D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Form_MuaSam.resources
+D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Form_GioHang.resources
+D:\LapTrinhTrucQuan\QLCuaHangThuCung\QLCuaHangThuCung_BTL\QLCuaHangThuCung_BTL\obj\Debug\QLCuaHangThuCung_BTL.Form_ThanhToan.resources

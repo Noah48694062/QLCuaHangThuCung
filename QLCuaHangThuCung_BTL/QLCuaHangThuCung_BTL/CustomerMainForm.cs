@@ -163,7 +163,7 @@ namespace QLCuaHangThuCung_BTL
 
         private void btnGioHang_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form_GioHang(this.currentIDKhachHang));
         }
 
         private void btnLichSu_Click(object sender, EventArgs e)

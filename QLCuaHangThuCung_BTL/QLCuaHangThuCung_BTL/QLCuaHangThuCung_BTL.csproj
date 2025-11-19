@@ -89,11 +89,23 @@
       <DependentUpon>CustomerModule.cs</DependentUpon>
     </Compile>
     <Compile Include="DBConnect.cs" />
+    <Compile Include="Form_GioHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GioHang.Designer.cs">
+      <DependentUpon>Form_GioHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_MuaSam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_MuaSam.Designer.cs">
       <DependentUpon>Form_MuaSam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThanhToan.Designer.cs">
+      <DependentUpon>Form_ThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="Loading.cs">
       <SubType>Form</SubType>
@@ -157,8 +169,14 @@
     <EmbeddedResource Include="CustomerModule.resx">
       <DependentUpon>CustomerModule.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_GioHang.resx">
+      <DependentUpon>Form_GioHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_MuaSam.resx">
       <DependentUpon>Form_MuaSam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThanhToan.resx">
+      <DependentUpon>Form_ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
