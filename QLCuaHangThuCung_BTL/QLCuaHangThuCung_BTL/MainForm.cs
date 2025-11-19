@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace QLCuaHangThuCung_BTL
@@ -131,6 +132,16 @@ namespace QLCuaHangThuCung_BTL
                 Login login = new Login();
                 this.Dispose();
                 login.ShowDialog();
+            }
+        }
+        public void AddToDailyReport(decimal TongDoanhThu)
+        {
+            decimal currentTongDoanhThu = 0;
+            if (decimal.TryParse(lblDailySale.Text, NumberStyles.Currency, CultureInfo.CurrentCulture, out currentTongDoanhThu))
+            {
+                decimal newTongDoanhThu = currentTongDoanhThu + TongDoanhThu;
+                //Cập nhật tổng doanh thu
+                lblDailySale.Text = newTongDoanhThu.ToString("C0");
             }
         }
     }
