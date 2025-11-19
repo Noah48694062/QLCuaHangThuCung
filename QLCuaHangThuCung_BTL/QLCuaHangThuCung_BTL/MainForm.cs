@@ -29,7 +29,7 @@ namespace QLCuaHangThuCung_BTL
             timer.Start();
 
             // Load dữ liệu tổng doanh thu ngày
-            loadDailySale();
+            //loadDailySale();
         }
 
         private void Timer_Tick(object sender, EventArgs e)

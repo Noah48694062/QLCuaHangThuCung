@@ -60,31 +60,33 @@ namespace QLCuaHangThuCung_BTL
         {
             try
             {
-                // Lấy IDHDB cuối cùng (lớn nhất) trong bảng
-                string query = "SELECT TOP 1 IDHDB FROM HoaDonBan ORDER BY IDHDB DESC";
+                // Câu lệnh SQL này sẽ:
+                // 1. Cắt bỏ chữ "HDB" (SUBSTRING)
+                // 2. Chuyển phần còn lại thành Số nguyên (CAST AS INT)
+                // 3. Tìm số lớn nhất (MAX)
+                // Cách này đảm bảo HDB10 luôn lớn hơn HDB9 (trong khi so sánh chuỗi thì ngược lại)
+                string query = "SELECT MAX(CAST(SUBSTRING(IDHDB, 4, 10) AS INT)) FROM HoaDonBan";
+
                 DataTable dt = db.GetData(query);
 
-                if (dt.Rows.Count == 0)
+                if (dt.Rows.Count > 0 && dt.Rows[0][0] != DBNull.Value)
                 {
-                    return "HDB0001"; // Nếu bảng trống, bắt đầu từ 0001
+                    int maxID = Convert.ToInt32(dt.Rows[0][0]); // Lấy số lớn nhất (ví dụ: 3)
+                    int nextID = maxID + 1; // Cộng thêm 1 (ví dụ: 4)
+
+                    // Format lại thành HDB0004
+                    return "HDB" + nextID.ToString("D4");
                 }
-
-                string lastID = dt.Rows[0]["IDHDB"].ToString(); // Ví dụ: HDB0005
-
-                // Cắt bỏ 3 ký tự đầu ("HDB") để lấy phần số ("0005")
-                string numberPart = lastID.Substring(3);
-
-                // Chuyển sang số và cộng thêm 1
-                int number = int.Parse(numberPart);
-                number++;
-
-                // Ghép lại thành chuỗi, "D4" nghĩa là đảm bảo luôn có 4 chữ số (0006)
-                return "HDB" + number.ToString("D4");
+                else
+                {
+                    return "HDB0001"; // Nếu bảng trống
+                }
             }
-            catch
+            catch (Exception)
             {
-                // Phòng trường hợp lỗi format hoặc dữ liệu cũ không đúng chuẩn
-                return "HDB" + DateTime.Now.ToString("ddHHmm");
+                // Phòng trường hợp dữ liệu cũ bị sai format không cắt chuỗi được
+                // Thì dùng ngày giờ để chắc chắn không trùng
+                return "HDB" + DateTime.Now.ToString("ddHHmmss");
             }
         }
 
