@@ -168,12 +168,12 @@ namespace QLCuaHangThuCung_BTL
 
         private void btnLichSu_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new Form_LichSu(this.currentIDKhachHang));
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-
+            openChildForm(new InformationForm(this.currentIDKhachHang));
         }
     }
 }

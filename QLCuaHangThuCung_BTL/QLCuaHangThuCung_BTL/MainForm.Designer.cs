@@ -506,7 +506,7 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(194, 45);
             this.btnUser.TabIndex = 4;
-            this.btnUser.Text = "Người dùng";
+            this.btnUser.Text = "Nhân viên";
             this.btnUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.TextOffset = new System.Drawing.Point(10, 0);
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);

@@ -314,7 +314,7 @@
             this.btnTaiKhoan.Name = "btnTaiKhoan";
             this.btnTaiKhoan.Size = new System.Drawing.Size(194, 45);
             this.btnTaiKhoan.TabIndex = 6;
-            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.Text = "Thông tin";
             this.btnTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTaiKhoan.TextOffset = new System.Drawing.Point(10, 0);
             this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);

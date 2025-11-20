@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cash));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnCash = new Guna.UI2.WinForms.Guna2Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,9 +40,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.dgvCash = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDHDB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,6 +49,9 @@
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKhachHang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCash)).BeginInit();
             this.SuspendLayout();
@@ -144,14 +144,14 @@
             this.dgvCash.AllowUserToAddRows = false;
             this.dgvCash.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCash.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCash.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCash.ColumnHeadersHeight = 30;
             this.dgvCash.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCash.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -172,6 +172,93 @@
             this.dgvCash.RowHeadersWidth = 51;
             this.dgvCash.Size = new System.Drawing.Size(1000, 224);
             this.dgvCash.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 62;
+            // 
+            // IDHDB
+            // 
+            this.IDHDB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IDHDB.DataPropertyName = "IDHDB";
+            this.IDHDB.HeaderText = "Mã hóa đơn";
+            this.IDHDB.MinimumWidth = 6;
+            this.IDHDB.Name = "IDHDB";
+            this.IDHDB.Visible = false;
+            this.IDHDB.Width = 150;
+            // 
+            // IDSanPham
+            // 
+            this.IDSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.IDSanPham.DataPropertyName = "IDSanPham";
+            this.IDSanPham.HeaderText = "Mã sản phẩm";
+            this.IDSanPham.MinimumWidth = 6;
+            this.IDSanPham.Name = "IDSanPham";
+            this.IDSanPham.Width = 156;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Tên sản phẩm";
+            this.TenSanPham.MinimumWidth = 6;
+            this.TenSanPham.Name = "TenSanPham";
+            // 
+            // SoLuongBan
+            // 
+            this.SoLuongBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SoLuongBan.DataPropertyName = "SoLuongBan";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.SoLuongBan.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SoLuongBan.HeaderText = "Số lượng";
+            this.SoLuongBan.MinimumWidth = 6;
+            this.SoLuongBan.Name = "SoLuongBan";
+            this.SoLuongBan.Width = 106;
+            // 
+            // DonGiaBan
+            // 
+            this.DonGiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DonGiaBan.DataPropertyName = "DonGiaBan";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "C0";
+            this.DonGiaBan.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DonGiaBan.HeaderText = "Giá";
+            this.DonGiaBan.MinimumWidth = 6;
+            this.DonGiaBan.Name = "DonGiaBan";
+            this.DonGiaBan.Width = 70;
+            // 
+            // TongTien
+            // 
+            this.TongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TongTien.DataPropertyName = "TongTien";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.TongTien.DefaultCellStyle = dataGridViewCellStyle4;
+            this.TongTien.HeaderText = "Tổng";
+            this.TongTien.MinimumWidth = 6;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.Width = 79;
+            // 
+            // TenKhachHang
+            // 
+            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TenKhachHang.DataPropertyName = "TenKhachHang";
+            this.TenKhachHang.HeaderText = "Họ Tên KH";
+            this.TenKhachHang.MinimumWidth = 6;
+            this.TenKhachHang.Name = "TenKhachHang";
+            this.TenKhachHang.Width = 125;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 6;
             // 
             // dataGridViewImageColumn1
             // 
@@ -200,93 +287,6 @@
             this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
             this.dataGridViewImageColumn3.Width = 125;
             // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 62;
-            // 
-            // IDHDB
-            // 
-            this.IDHDB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.IDHDB.DataPropertyName = "IDHDB";
-            this.IDHDB.HeaderText = "Mã hóa đơn";
-            this.IDHDB.MinimumWidth = 6;
-            this.IDHDB.Name = "IDHDB";
-            this.IDHDB.Visible = false;
-            this.IDHDB.Width = 148;
-            // 
-            // IDSanPham
-            // 
-            this.IDSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.IDSanPham.DataPropertyName = "IDSanPham";
-            this.IDSanPham.HeaderText = "Mã sản phẩm";
-            this.IDSanPham.MinimumWidth = 6;
-            this.IDSanPham.Name = "IDSanPham";
-            this.IDSanPham.Width = 156;
-            // 
-            // TenSanPham
-            // 
-            this.TenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenSanPham.DataPropertyName = "TenSanPham";
-            this.TenSanPham.HeaderText = "Tên sản phẩm";
-            this.TenSanPham.MinimumWidth = 6;
-            this.TenSanPham.Name = "TenSanPham";
-            // 
-            // SoLuongBan
-            // 
-            this.SoLuongBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.SoLuongBan.DataPropertyName = "SoLuongBan";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.SoLuongBan.DefaultCellStyle = dataGridViewCellStyle6;
-            this.SoLuongBan.HeaderText = "Số lượng";
-            this.SoLuongBan.MinimumWidth = 6;
-            this.SoLuongBan.Name = "SoLuongBan";
-            this.SoLuongBan.Width = 106;
-            // 
-            // DonGiaBan
-            // 
-            this.DonGiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.DonGiaBan.DataPropertyName = "DonGiaBan";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "C0";
-            this.DonGiaBan.DefaultCellStyle = dataGridViewCellStyle7;
-            this.DonGiaBan.HeaderText = "Giá";
-            this.DonGiaBan.MinimumWidth = 6;
-            this.DonGiaBan.Name = "DonGiaBan";
-            this.DonGiaBan.Width = 70;
-            // 
-            // TongTien
-            // 
-            this.TongTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TongTien.DataPropertyName = "TongTien";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.TongTien.DefaultCellStyle = dataGridViewCellStyle8;
-            this.TongTien.HeaderText = "Tổng";
-            this.TongTien.MinimumWidth = 6;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.Width = 79;
-            // 
-            // TenKhachHang
-            // 
-            this.TenKhachHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.TenKhachHang.DataPropertyName = "TenKhachHang";
-            this.TenKhachHang.HeaderText = "Họ Tên KH";
-            this.TenKhachHang.MinimumWidth = 6;
-            this.TenKhachHang.Name = "TenKhachHang";
-            this.TenKhachHang.Width = 125;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = ((System.Drawing.Image)(resources.GetObject("Delete.Image")));
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 6;
-            // 
             // Cash
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -296,7 +296,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Cash";
-            this.Text = "Form1";
+            this.Text = "Quản lý tài chính";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCash)).EndInit();

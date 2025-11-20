@@ -187,7 +187,7 @@
             this.btnAdd.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnAdd.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(3, 7);
+            this.btnAdd.Location = new System.Drawing.Point(3, 6);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(40, 34);
             this.btnAdd.TabIndex = 4;
@@ -241,7 +241,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ProductForm";
+            this.Text = "Quản lý sản phẩm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

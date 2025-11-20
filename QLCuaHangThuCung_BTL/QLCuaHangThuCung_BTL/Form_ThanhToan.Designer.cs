@@ -175,7 +175,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form_ThanhToan";
+            this.Text = "Xác nhận thanh toán?";
             this.Load += new System.EventHandler(this.Form_ThanhToan_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

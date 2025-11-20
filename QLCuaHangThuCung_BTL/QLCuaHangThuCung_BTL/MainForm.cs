@@ -66,32 +66,32 @@ namespace QLCuaHangThuCung_BTL
         //=============================
         // LOAD DAILY SALES
         //=============================
-        public void loadDailySale()
-        {
-            try
-            {
-                string query =
-                    "SELECT ISNULL(SUM(c.ThanhTien),0) AS total " +
-                    "FROM ChiTietHDB c " +
-                    "JOIN HoaDonBan h ON c.IDHDB = h.IDHDB " +
-                    "WHERE CAST(h.ThoiGian AS date) = CAST(@sdate AS date)";
+        //public void loadDailySale()
+        //{
+        //    try
+        //    {
+        //        string query =
+        //            "SELECT ISNULL(SUM(c.ThanhTien),0) AS total " +
+        //            "FROM ChiTietHDB c " +
+        //            "JOIN HoaDonBan h ON c.IDHDB = h.IDHDB " +
+        //            "WHERE CAST(h.ThoiGian AS date) = CAST(@sdate AS date)";
 
-                DataTable dt = db.GetData(query,
-                    new SqlParameter("@sdate", DateTime.Today));
+        //        DataTable dt = db.GetData(query,
+        //            new SqlParameter("@sdate", DateTime.Today));
 
-                double total = 0;
+        //        double total = 0;
 
-                if (dt.Rows.Count > 0 && dt.Rows[0][0] != DBNull.Value)
-                    total = Convert.ToDouble(dt.Rows[0][0]);
+        //        if (dt.Rows.Count > 0 && dt.Rows[0][0] != DBNull.Value)
+        //            total = Convert.ToDouble(dt.Rows[0][0]);
 
-                lblDailySale.Text = total.ToString("#,##0.00");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi loadDailySale: " + ex.Message,
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        //        lblDailySale.Text = total.ToString("#,##0.00");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Lỗi loadDailySale: " + ex.Message,
+        //            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
 
 

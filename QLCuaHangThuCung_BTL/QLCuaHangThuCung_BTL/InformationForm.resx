@@ -159,22 +159,6 @@
         QmCC
 </value>
   </data>
-  <metadata name="Delete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Delete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAadJREFUOE9j
-        YBjyQFpaQ1heUScZhGVktIXQ5YkCKioqfD46lpX+elatpupGG311rdtBGMQGiYHkQGrQ9WEFProWqUF6
-        1qf3+8X+Px4Qj4Fvh6b+PxWY8D9E3+okSC26fhSgoKAt0Wfv+xbdEFy4x97nraKijji6OShAUVHLdkVc
-        8c/rhV3/8eEVcYU/lJS0bdD1YwBlZT2xVbHFrz/Xzfi/xS/u/828tv/HYvP/H4st+H8zv/X/Vr/Y/yC5
-        FbFFr1VUDEXR9WMCBweWaaEZD0GaQN46kVbz/3h0Lhjfzm0Di4HkpoSkP2RgCGVG144V9AUmX8Nm4K3c
-        VriBvQHJV9H14QQdfomnsRkIZkMNbPdLOIWuDydo8InZT8jARu/Yfej6cIJqz4jN6AZejCtEMbDSM2Iz
-        uj6coNA1ZDm6gW/Sa1AMBKlB14cTZDj4zwZp2ucb8/98Vv3/Y9G5YHwus/7/PmiySXPwn42uDycINHdr
-        f1U15f+jkh6w5leVk8AYxAaJvaqa/D/I3LUNXR9OoKRkzO9n6jIz0spzCTbsb+Y8A6QGXd8IBQD+jlTv
-        /w99VAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAfxJREFUSEvt

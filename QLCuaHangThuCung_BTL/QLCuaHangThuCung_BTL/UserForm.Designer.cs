@@ -77,13 +77,14 @@
             this.Delete});
             this.dgvUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUser.EnableHeadersVisualStyles = false;
-            this.dgvUser.Location = new System.Drawing.Point(0, 78);
-            this.dgvUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvUser.Location = new System.Drawing.Point(0, 67);
+            this.dgvUser.Margin = new System.Windows.Forms.Padding(4);
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.RowHeadersVisible = false;
             this.dgvUser.RowHeadersWidth = 62;
-            this.dgvUser.Size = new System.Drawing.Size(1333, 291);
+            this.dgvUser.Size = new System.Drawing.Size(1000, 233);
             this.dgvUser.TabIndex = 5;
+            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
             // Column1
             // 
@@ -96,10 +97,10 @@
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Mã khách hàng";
+            this.Column2.HeaderText = "Mã nhân viên";
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
-            this.Column2.Width = 186;
+            this.Column2.Width = 166;
             // 
             // Column3
             // 
@@ -127,10 +128,10 @@
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "Vai Trò";
+            this.Column6.HeaderText = "Email";
             this.Column6.MinimumWidth = 8;
             this.Column6.Name = "Column6";
-            this.Column6.Width = 99;
+            this.Column6.Width = 83;
             // 
             // Column7
             // 
@@ -172,9 +173,9 @@
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 18);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1333, 60);
+            this.panel2.Size = new System.Drawing.Size(1000, 49);
             this.panel2.TabIndex = 4;
             // 
             // btnAdd
@@ -191,10 +192,10 @@
             this.btnAdd.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.btnAdd.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.Location = new System.Drawing.Point(4, 9);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(3, 6);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(53, 42);
+            this.btnAdd.Size = new System.Drawing.Size(40, 34);
             this.btnAdd.TabIndex = 4;
             // 
             // txtSearch
@@ -212,12 +213,12 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearch.IconLeft")));
-            this.txtSearch.Location = new System.Drawing.Point(940, 6);
+            this.txtSearch.Location = new System.Drawing.Point(705, 5);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PlaceholderText = "Tìm kiếm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(383, 47);
+            this.txtSearch.Size = new System.Drawing.Size(287, 38);
             this.txtSearch.TabIndex = 0;
             // 
             // panel1
@@ -225,23 +226,23 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1333, 18);
+            this.panel1.Size = new System.Drawing.Size(1000, 18);
             this.panel1.TabIndex = 3;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1333, 369);
+            this.ClientSize = new System.Drawing.Size(1000, 300);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserForm";
-            this.Text = "UserForm";
+            this.Text = "Quản lý nhân viên";
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

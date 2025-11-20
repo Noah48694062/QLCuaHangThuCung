@@ -27,14 +27,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_GioHang));
             this.dgvGioHang = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblTongTien = new System.Windows.Forms.Label();
-            this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSanPham = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +38,11 @@
             this.TenNSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.XoaGioHang = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTongTien = new System.Windows.Forms.Label();
+            this.btnThanhToan = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -52,14 +52,14 @@
             this.dgvGioHang.AllowUserToAddRows = false;
             this.dgvGioHang.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvGioHang.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGioHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGioHang.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGioHang.ColumnHeadersHeight = 30;
             this.dgvGioHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvGioHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -81,6 +81,76 @@
             this.dgvGioHang.TabIndex = 14;
             this.dgvGioHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGioHang_CellContentClick);
             this.dgvGioHang.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGioHang_CellValueChanged);
+            // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.STT.DataPropertyName = "STT";
+            this.STT.HeaderText = "STT";
+            this.STT.MinimumWidth = 6;
+            this.STT.Name = "STT";
+            this.STT.Width = 62;
+            // 
+            // IDSanPham
+            // 
+            this.IDSanPham.DataPropertyName = "IDSanPham";
+            this.IDSanPham.HeaderText = "Mã sản phẩm";
+            this.IDSanPham.MinimumWidth = 6;
+            this.IDSanPham.Name = "IDSanPham";
+            this.IDSanPham.Visible = false;
+            this.IDSanPham.Width = 125;
+            // 
+            // TenSanPham
+            // 
+            this.TenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSanPham.DataPropertyName = "TenSanPham";
+            this.TenSanPham.HeaderText = "Tên sản phẩm";
+            this.TenSanPham.MinimumWidth = 6;
+            this.TenSanPham.Name = "TenSanPham";
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng mua";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 125;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.GiaBan.DataPropertyName = "GiaBan";
+            this.GiaBan.HeaderText = "Giá bán";
+            this.GiaBan.MinimumWidth = 6;
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.Width = 113;
+            // 
+            // TenNSX
+            // 
+            this.TenNSX.DataPropertyName = "TenNSX";
+            this.TenNSX.HeaderText = "NSX";
+            this.TenNSX.MinimumWidth = 6;
+            this.TenNSX.Name = "TenNSX";
+            this.TenNSX.Width = 125;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "ThanhTien";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            this.ThanhTien.Width = 125;
+            // 
+            // XoaGioHang
+            // 
+            this.XoaGioHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.XoaGioHang.DataPropertyName = "XoaGioHang";
+            this.XoaGioHang.HeaderText = "";
+            this.XoaGioHang.Image = ((System.Drawing.Image)(resources.GetObject("XoaGioHang.Image")));
+            this.XoaGioHang.MinimumWidth = 6;
+            this.XoaGioHang.Name = "XoaGioHang";
+            this.XoaGioHang.Width = 6;
             // 
             // panel2
             // 
@@ -153,76 +223,6 @@
             this.panel1.Size = new System.Drawing.Size(1000, 15);
             this.panel1.TabIndex = 12;
             // 
-            // STT
-            // 
-            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.STT.DataPropertyName = "STT";
-            this.STT.HeaderText = "STT";
-            this.STT.MinimumWidth = 6;
-            this.STT.Name = "STT";
-            this.STT.Width = 62;
-            // 
-            // IDSanPham
-            // 
-            this.IDSanPham.DataPropertyName = "IDSanPham";
-            this.IDSanPham.HeaderText = "Mã sản phẩm";
-            this.IDSanPham.MinimumWidth = 6;
-            this.IDSanPham.Name = "IDSanPham";
-            this.IDSanPham.Visible = false;
-            this.IDSanPham.Width = 125;
-            // 
-            // TenSanPham
-            // 
-            this.TenSanPham.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenSanPham.DataPropertyName = "TenSanPham";
-            this.TenSanPham.HeaderText = "Tên sản phẩm";
-            this.TenSanPham.MinimumWidth = 6;
-            this.TenSanPham.Name = "TenSanPham";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng mua";
-            this.SoLuong.MinimumWidth = 6;
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Width = 125;
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.GiaBan.DataPropertyName = "GiaBan";
-            this.GiaBan.HeaderText = "Giá bán";
-            this.GiaBan.MinimumWidth = 6;
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.Width = 113;
-            // 
-            // TenNSX
-            // 
-            this.TenNSX.DataPropertyName = "TenNSX";
-            this.TenNSX.HeaderText = "NSX";
-            this.TenNSX.MinimumWidth = 6;
-            this.TenNSX.Name = "TenNSX";
-            this.TenNSX.Width = 125;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "ThanhTien";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Width = 125;
-            // 
-            // XoaGioHang
-            // 
-            this.XoaGioHang.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.XoaGioHang.DataPropertyName = "XoaGioHang";
-            this.XoaGioHang.HeaderText = "";
-            this.XoaGioHang.Image = ((System.Drawing.Image)(resources.GetObject("XoaGioHang.Image")));
-            this.XoaGioHang.MinimumWidth = 6;
-            this.XoaGioHang.Name = "XoaGioHang";
-            this.XoaGioHang.Width = 6;
-            // 
             // Form_GioHang
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -238,7 +238,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Form_GioHang";
+            this.Text = "Giỏ hàng của bạn";
             this.Load += new System.EventHandler(this.Form_GioHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGioHang)).EndInit();
             this.panel2.ResumeLayout(false);
