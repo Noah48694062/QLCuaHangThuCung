@@ -29,14 +29,11 @@ namespace QLCuaHangThuCung_BTL
 
             // Gán sự kiện Click cho các nút
             this.btnUpdate.Click += new EventHandler(this.btnUpdate_Click);
-            this.btnSave.Visible = false;      // ẨN NÚT LƯU
-            this.btnCancel.Visible = false;    // ẨN NÚT THOÁT
             this.btnClose.Click += new EventHandler(this.btnClose_Click);
         }
 
         private void SetupProfileView()
         {
-            btnSave.Visible = false;
             btnUpdate.Enabled = true;
             btnUpdate.Text = "CẬP NHẬT THÔNG TIN";
 

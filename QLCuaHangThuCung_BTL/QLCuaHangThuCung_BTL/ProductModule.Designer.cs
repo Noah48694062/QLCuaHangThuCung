@@ -210,9 +210,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.label1.Location = new System.Drawing.Point(12, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(247, 33);
+            this.label1.Size = new System.Drawing.Size(265, 33);
             this.label1.TabIndex = 42;
-            this.label1.Text = "Quản lý sản phẩm";
+            this.label1.Text = "Thông tin sản phẩm";
             // 
             // panel1
             // 
@@ -330,7 +330,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "ProductModule";
+            this.Text = "Thông tin sản phẩm";
             this.ResumeLayout(false);
             this.PerformLayout();
 

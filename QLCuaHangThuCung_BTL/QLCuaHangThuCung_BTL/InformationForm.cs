@@ -114,7 +114,7 @@ namespace QLCuaHangThuCung_BTL
                 InformationModule module = new InformationModule(currentCustomerID) 
                 {
                  
-                    btnSave = { Visible = false },
+                    
                     btnUpdate = { Visible = true, Enabled = true },
                     txtIDKhachHang = { Enabled = false } 
                 };

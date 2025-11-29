@@ -27,7 +27,7 @@ namespace QLCuaHangThuCung_BTL
 
         private void timer1_Tick_1(object sender, EventArgs e)
         {
-            startPoint += 2;
+            startPoint += 4;
             guna2ProgressBar1.Value = startPoint;
             if (guna2ProgressBar1.Value == 100)
             {
