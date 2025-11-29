@@ -74,7 +74,7 @@ namespace QLCuaHangThuCung_BTL
                             $"WHERE ChiTietHDB.IDSanPham LIKE N'{likeKeyword}' " +
                             $"OR TenSanPham LIKE N'{likeKeyword}' " +
                             $"OR LoaiSP LIKE N'{likeKeyword}'" +
-                            $"OR IDHDB LIKE N'{likeKeyword}'";
+                            $"OR ChiTietHDB.IDHDB LIKE N'{likeKeyword}'";
 
                 DataTable dt = db.GetData(query);
                 dgvProduct.DataSource = dt;
