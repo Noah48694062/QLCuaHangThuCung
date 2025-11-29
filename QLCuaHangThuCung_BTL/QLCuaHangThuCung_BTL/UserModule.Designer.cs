@@ -51,6 +51,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtIDNhanVien = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
             // btnClose
@@ -264,7 +265,6 @@
             this.txtIDNhanVien.Location = new System.Drawing.Point(285, 101);
             this.txtIDNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDNhanVien.Name = "txtIDNhanVien";
-            this.txtIDNhanVien.PasswordChar = '*';
             this.txtIDNhanVien.Size = new System.Drawing.Size(615, 22);
             this.txtIDNhanVien.TabIndex = 32;
             this.txtIDNhanVien.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -276,6 +276,12 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(615, 22);
             this.txtEmail.TabIndex = 33;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // UserModule
             // 
@@ -335,5 +341,6 @@
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.TextBox txtIDNhanVien;
         public System.Windows.Forms.TextBox txtEmail;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

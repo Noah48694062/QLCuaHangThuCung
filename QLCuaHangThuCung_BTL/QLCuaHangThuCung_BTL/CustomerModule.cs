@@ -41,6 +41,7 @@ namespace QLCuaHangThuCung_BTL
 
         private bool CheckRequiredFields()
         {
+            // 1. Kiểm tra để trống
             if (string.IsNullOrWhiteSpace(txtIDKhachHang.Text) ||
                 string.IsNullOrWhiteSpace(txtHoVaTen.Text) ||
                 string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
@@ -48,10 +49,44 @@ namespace QLCuaHangThuCung_BTL
                 string.IsNullOrWhiteSpace(txtEmail.Text) ||
                 string.IsNullOrWhiteSpace(txtMatKhau.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ các trường bắt buộc!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ các trường bắt buộc!", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
-            return true;
+
+            // 2. Kiểm tra Số điện thoại (Phải là số và độ dài khoảng 10 số)
+            if (!long.TryParse(txtSDT.Text, out _) || txtSDT.Text.Length != 10)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! (Phải là 10 chữ số)", "Sai định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSDT.Focus();
+                return false;
+            }
+
+            // 3. Kiểm tra Email (Đơn giản: Phải chứa @ và dấu chấm)
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
+            {
+                MessageBox.Show("Email không đúng định dạng (VD: khachhang@gmail.com)", "Sai định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return false;
+            }
+
+            // 4. Kiểm tra Độ dài Mật khẩu (Ví dụ: Tối thiểu 6 ký tự)
+            if (txtMatKhau.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự để đảm bảo an toàn!", "Mật khẩu yếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatKhau.Focus();
+                return false;
+            }
+
+            // 5. Kiểm tra Mã khách hàng không chứa ký tự đặc biệt (Tùy chọn)
+            // Giả sử mã chỉ được chứa chữ và số
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtIDKhachHang.Text, "^[a-zA-Z0-9]*$"))
+            {
+                MessageBox.Show("Mã khách hàng không được chứa ký tự đặc biệt!", "Sai định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtIDKhachHang.Focus();
+                return false;
+            }
+
+            return true; // Dữ liệu hợp lệ
         }
 
         private void btnSave_Click(object sender, EventArgs e)

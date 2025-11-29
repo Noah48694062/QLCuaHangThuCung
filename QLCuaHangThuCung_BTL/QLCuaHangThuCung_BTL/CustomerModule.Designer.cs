@@ -49,6 +49,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
             // btnCancel
@@ -252,8 +253,15 @@
             this.txtMatKhau.Location = new System.Drawing.Point(280, 426);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(615, 22);
             this.txtMatKhau.TabIndex = 49;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // CustomerModule
             // 
@@ -310,5 +318,6 @@
         public System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtMatKhau;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

@@ -44,15 +44,49 @@ namespace QLCuaHangThuCung_BTL
         private bool CheckRequiredFields()
         {
             if (string.IsNullOrWhiteSpace(txtIDNhanVien.Text) ||
-                string.IsNullOrWhiteSpace(txtHoVaTen.Text) ||
-                string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
-                string.IsNullOrWhiteSpace(txtSDT.Text) ||
-                string.IsNullOrWhiteSpace(txtEmail.Text) ||
-                string.IsNullOrWhiteSpace(txtMatKhau.Text))
+            string.IsNullOrWhiteSpace(txtHoVaTen.Text) ||
+            string.IsNullOrWhiteSpace(txtDiaChi.Text) ||
+            string.IsNullOrWhiteSpace(txtSDT.Text) ||
+            string.IsNullOrWhiteSpace(txtEmail.Text) ||
+            string.IsNullOrWhiteSpace(txtMatKhau.Text))
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ các trường bắt buộc!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vui lòng nhập đầy đủ các trường bắt buộc!", "Thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
+
+            // 2. Kiểm tra Độ dài Mật khẩu (Ví dụ: Tối thiểu 6 ký tự)
+            if (txtMatKhau.Text.Length < 6)
+            {
+                MessageBox.Show("Mật khẩu phải có ít nhất 6 ký tự!", "Mật khẩu yếu", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatKhau.Focus();
+                return false;
+            }
+
+            // 3. Kiểm tra Số điện thoại (Phải là số và độ dài khoảng 10 số)
+            if (!long.TryParse(txtSDT.Text, out _) || txtSDT.Text.Length != 10)
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ! (Phải là 10 chữ số)", "Sai định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSDT.Focus();
+                return false;
+            }
+
+            if (!txtEmail.Text.Contains("@") || !txtEmail.Text.Contains("."))
+            {
+                MessageBox.Show("Email không đúng định dạng (VD: abc@gmail.com)", "Sai định dạng", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return false;
+            }
+
+            DateTime limitDate = DateTime.Today.AddYears(-18);
+
+            // Nếu ngày sinh LỚN HƠN mốc này => Chưa đủ 18 tuổi
+            if (txtNgaySinh.Value > limitDate)
+            {
+                MessageBox.Show("Nhân viên phải đủ 18 tuổi trở lên!", "Tuổi không hợp lệ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtNgaySinh.Focus();
+                return false;
+            }
+
             return true;
         }
 
@@ -66,7 +100,7 @@ namespace QLCuaHangThuCung_BTL
             try
             {
                 string id = txtIDNhanVien.Text.Trim();
-                string gioiTinh = "Nam"; // Giả định Giới tính (Cần bổ sung control cho Giới tính)
+                //string gioiTinh = "Nam"; // Giả định Giới tính (Cần bổ sung control cho Giới tính)
 
                 // 1. Thêm Tài khoản (IDTaiKhoan = IDNhanVien)
                 string queryTK = @"
@@ -82,8 +116,8 @@ namespace QLCuaHangThuCung_BTL
 
                 // 2. Thêm Nhân viên
                 string queryNV = @"
-                    INSERT INTO NhanVien(IDNhanVien, TenNhanVien, SDT, DiaChi, Email, IDTaiKhoan, GioiTinh)
-                    VALUES (@id, @ten, @sdt, @diachi, @email, @idtk, @gioitinh)";
+                    INSERT INTO NhanVien(IDNhanVien, TenNhanVien, SDT, DiaChi, Email, IDTaiKhoan, NgaySinh)
+                    VALUES (@id, @ten, @sdt, @diachi, @email, @idtk, @ngaysinh)";
 
                 db.Execute(queryNV,
                     new SqlParameter("@id", id),
@@ -92,7 +126,7 @@ namespace QLCuaHangThuCung_BTL
                     new SqlParameter("@diachi", txtDiaChi.Text.Trim()),
                     new SqlParameter("@email", txtEmail.Text.Trim()),
                     new SqlParameter("@idtk", id),
-                    new SqlParameter("@gioitinh", gioiTinh)
+                    new SqlParameter("@ngaysinh", txtNgaySinh.Value)
                 );
 
                 MessageBox.Show("Đã thêm nhân viên thành công!", "Thông báo");
@@ -132,7 +166,7 @@ namespace QLCuaHangThuCung_BTL
             try
             {
                 string idNhanVien = txtIDNhanVien.Text.Trim();
-                string gioiTinh = "Nam"; // Giả định Giới tính
+                //string gioiTinh = "Nam"; // Giả định Giới tính
 
                 // 1. Cập nhật Tài khoản (Mật khẩu)
                 string queryTK = @"
@@ -152,7 +186,7 @@ namespace QLCuaHangThuCung_BTL
                         SDT = @sdt,
                         DiaChi = @diachi,
                         Email = @email,
-                        GioiTinh = @gioitinh
+                        NgaySinh = @ngaysinh
                     WHERE IDNhanVien = @id";
 
                 db.Execute(queryNV,
@@ -161,7 +195,7 @@ namespace QLCuaHangThuCung_BTL
                     new SqlParameter("@sdt", txtSDT.Text.Trim()),
                     new SqlParameter("@diachi", txtDiaChi.Text.Trim()),
                     new SqlParameter("@email", txtEmail.Text.Trim()),
-                    new SqlParameter("@gioitinh", gioiTinh)
+                    new SqlParameter("@ngaysinh", txtNgaySinh.Value)
                 );
 
                 MessageBox.Show("Đã cập nhật thông tin nhân viên!", "Thông báo");

@@ -43,6 +43,7 @@
             this.txtname = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtpass = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,7 +60,7 @@
             this.btnForget.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnForget.ForeColor = System.Drawing.Color.DarkGray;
             this.btnForget.Location = new System.Drawing.Point(681, 329);
-            this.btnForget.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnForget.Margin = new System.Windows.Forms.Padding(4);
             this.btnForget.Name = "btnForget";
             this.btnForget.Size = new System.Drawing.Size(201, 55);
             this.btnForget.TabIndex = 22;
@@ -77,7 +78,7 @@
             this.panel1.Controls.Add(this.guna2CirclePictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(427, 554);
             this.panel1.TabIndex = 18;
@@ -136,7 +137,7 @@
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(141, 48);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(124, 122);
@@ -157,7 +158,7 @@
             this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(1015, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 42);
             this.btnClose.TabIndex = 23;
@@ -170,7 +171,7 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(435, 329);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(201, 55);
             this.btnLogin.TabIndex = 21;
@@ -191,7 +192,7 @@
             this.txtname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtname.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtname.IconLeft")));
             this.txtname.Location = new System.Drawing.Point(435, 206);
-            this.txtname.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtname.Margin = new System.Windows.Forms.Padding(5);
             this.txtname.Name = "txtname";
             this.txtname.PlaceholderText = "Tendangnhap";
             this.txtname.SelectedText = "";
@@ -211,7 +212,7 @@
             this.txtpass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtpass.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtpass.IconLeft")));
             this.txtpass.Location = new System.Drawing.Point(435, 261);
-            this.txtpass.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtpass.Margin = new System.Windows.Forms.Padding(5);
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.PlaceholderText = "Matkhau";
@@ -232,6 +233,12 @@
             this.label6.TabIndex = 24;
             this.label6.Text = "ĐĂNG NHẬP TÀI KHOẢN";
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,7 +252,7 @@
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.label6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
@@ -271,5 +278,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtname;
         private Guna.UI2.WinForms.Guna2TextBox txtpass;
         private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

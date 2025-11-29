@@ -52,6 +52,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtMoTa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SuspendLayout();
             // 
             // txtGiaBan
@@ -295,6 +296,12 @@
             this.label8.TabIndex = 56;
             this.label8.Text = "Mô tả :";
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // ProductModule
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -361,5 +368,6 @@
         private System.Windows.Forms.Label label8;
         public System.Windows.Forms.TextBox txtGiaNhap;
         private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

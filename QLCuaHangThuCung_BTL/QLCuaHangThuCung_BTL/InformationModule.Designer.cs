@@ -45,12 +45,14 @@
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.txtIDKhachHang = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(285, 373);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(615, 22);
             this.txtMatKhau.TabIndex = 67;
@@ -68,7 +70,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(285, 310);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(615, 22);
             this.txtEmail.TabIndex = 65;
@@ -96,7 +98,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.Location = new System.Drawing.Point(500, 429);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(185, 50);
             this.btnUpdate.TabIndex = 59;
@@ -106,7 +108,7 @@
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(285, 190);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(615, 22);
             this.txtDiaChi.TabIndex = 53;
@@ -124,7 +126,7 @@
             // txtHoVaTen
             // 
             this.txtHoVaTen.Location = new System.Drawing.Point(285, 129);
-            this.txtHoVaTen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoVaTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoVaTen.Name = "txtHoVaTen";
             this.txtHoVaTen.Size = new System.Drawing.Size(615, 22);
             this.txtHoVaTen.TabIndex = 51;
@@ -165,7 +167,7 @@
             this.btnClose.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.Location = new System.Drawing.Point(887, 38);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 42);
             this.btnClose.TabIndex = 61;
@@ -173,7 +175,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(285, 252);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(615, 22);
             this.txtSDT.TabIndex = 54;
@@ -195,16 +197,31 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(172)))), ((int)(((byte)(220)))));
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(944, 18);
             this.panel1.TabIndex = 50;
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
+            // txtIDKhachHang
+            // 
+            this.txtIDKhachHang.Location = new System.Drawing.Point(22, 443);
+            this.txtIDKhachHang.Name = "txtIDKhachHang";
+            this.txtIDKhachHang.Size = new System.Drawing.Size(100, 22);
+            this.txtIDKhachHang.TabIndex = 68;
+            this.txtIDKhachHang.Visible = false;
             // 
             // InformationModule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 482);
+            this.Controls.Add(this.txtIDKhachHang);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtEmail);
@@ -246,5 +263,7 @@
         public System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private System.Windows.Forms.TextBox txtIDKhachHang;
     }
 }

@@ -66,6 +66,7 @@
             this.btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -559,6 +560,12 @@
             this.panel1.Size = new System.Drawing.Size(6, 680);
             this.panel1.TabIndex = 8;
             // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this.panel4;
+            this.guna2DragControl1.UseTransparentDrag = true;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -632,6 +639,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnClose;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }
 

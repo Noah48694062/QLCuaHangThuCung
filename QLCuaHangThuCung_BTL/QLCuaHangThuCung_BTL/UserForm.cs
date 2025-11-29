@@ -23,19 +23,19 @@ namespace QLCuaHangThuCung_BTL
             // Gán sự kiện Click cho nút Thêm
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // Gán sự kiện CellContentClick cho DataGridView
-            this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
+            //this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
         }
 
         public void LoadUser()
         {
             dgvUser.Rows.Clear();
 
-            // Lấy dữ liệu nhân viên (chú ý: lược đồ DB của bạn không có NgàySinh, tôi tạm sử dụng cấu trúc cũ của bạn)
+            // 1. Thêm NgaySinh vào câu truy vấn
             string query = @"
-                SELECT IDNhanVien, TenNhanVien, DiaChi, SDT, Email, GioiTinh, IDTaiKhoan
-                FROM NhanVien 
-                WHERE TenNhanVien LIKE @search OR IDNhanVien LIKE @search 
-                ORDER BY IDNhanVien ASC";
+        SELECT IDNhanVien, TenNhanVien, DiaChi, SDT, Email, NgaySinh, IDTaiKhoan
+        FROM NhanVien 
+        WHERE TenNhanVien LIKE @search OR IDNhanVien LIKE @search 
+        ORDER BY IDNhanVien ASC";
 
             DataTable dt = db.GetData(query,
                 new SqlParameter("@search", "%" + txtSearch.Text.Trim() + "%")
@@ -45,10 +45,9 @@ namespace QLCuaHangThuCung_BTL
             foreach (DataRow row in dt.Rows)
             {
                 i++;
-                // Lấy Mật khẩu từ bảng TaiKhoan (chỉ để lấy mật khẩu gốc khi sửa)
                 string matKhau = GetPasswordFromTaiKhoan(row["IDTaiKhoan"].ToString());
 
-                // Hiển thị dữ liệu, Mật khẩu được ẩn danh
+                // 2. Đổ dữ liệu đúng thứ tự cột trên Grid
                 dgvUser.Rows.Add(
                     i,
                     row["IDNhanVien"].ToString(),
@@ -56,8 +55,8 @@ namespace QLCuaHangThuCung_BTL
                     row["DiaChi"].ToString(),
                     row["SDT"].ToString(),
                     row["Email"].ToString(),
-                    row["GioiTinh"].ToString(), // Cột 7: GioiTinh (Thay cho Ngày Sinh)
-                    "********" // Cột 8: Mật khẩu hiển thị ẩn danh
+                    Convert.ToDateTime(row["NgaySinh"]).ToString("dd/MM/yyyy"), // Cột 7: Ngày Sinh (Format đẹp)
+                    "********" // Cột 8: Mật khẩu
                 );
             }
         }

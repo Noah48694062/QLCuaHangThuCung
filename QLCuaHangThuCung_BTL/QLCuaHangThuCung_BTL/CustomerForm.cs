@@ -16,7 +16,7 @@ namespace QLCuaHangThuCung_BTL
 
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
+            //this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
         }
 
         private string GetPasswordFromTaiKhoan(string idTaiKhoan)

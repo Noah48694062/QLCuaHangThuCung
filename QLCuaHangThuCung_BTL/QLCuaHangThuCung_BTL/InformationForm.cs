@@ -22,7 +22,7 @@ namespace QLCuaHangThuCung_BTL
             LoadInformation();
             SetupDataGridViewColumns();
 
-            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
+            //this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
         }
 
  
@@ -116,11 +116,11 @@ namespace QLCuaHangThuCung_BTL
                  
                     
                     btnUpdate = { Visible = true, Enabled = true },
-                    txtIDKhachHang = { Enabled = false } 
+                    //txtIDKhachHang = { Enabled = false } 
                 };
 
                
-                module.txtIDKhachHang.Text = customerId;
+                //module.txtIDKhachHang.Text = customerId;
                 module.txtHoVaTen.Text = dgvCustomer.Rows[e.RowIndex].Cells[2].Value.ToString();
                 module.txtDiaChi.Text = dgvCustomer.Rows[e.RowIndex].Cells[4].Value.ToString();
                 module.txtSDT.Text = dgvCustomer.Rows[e.RowIndex].Cells[5].Value.ToString();
