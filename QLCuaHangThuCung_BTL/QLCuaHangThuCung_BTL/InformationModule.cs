@@ -36,7 +36,7 @@ namespace QLCuaHangThuCung_BTL
             btnUpdate.Text = "CẬP NHẬT THÔNG TIN";
             txtMatKhau.PasswordChar = '\0'; // Hiện mật khẩu rõ
             this.Text = "THÔNG TIN CÁ NHÂN";
-
+            txtMatKhau.UseSystemPasswordChar = true;
             // Khóa trường ID
             txtIDKhachHang.Text = currentCustomerID;
             txtIDKhachHang.Enabled = false;
@@ -162,6 +162,11 @@ namespace QLCuaHangThuCung_BTL
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

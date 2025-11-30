@@ -21,6 +21,8 @@ namespace QLCuaHangThuCung_BTL
 
             LoadInformation();
             SetupDataGridViewColumns();
+            this.dgvCustomer.CellFormatting += dgvCustomer_CellFormatting;
+
 
             //this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
         }
@@ -86,6 +88,18 @@ namespace QLCuaHangThuCung_BTL
                     row["Email"].ToString(),
                     row["MatKhau"].ToString() 
                 );
+            }
+        }
+        private void dgvCustomer_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            // Giả sử cột mật khẩu có tên là "MatKhau"
+            if (dgvCustomer.Columns[e.ColumnIndex].Name == "MatKhau" && e.Value != null)
+            {
+                string realValue = e.Value.ToString();
+
+                // Hiển thị chuỗi ký tự '*'
+                e.Value = new string('*', realValue.Length);
+                e.FormattingApplied = true;
             }
         }
 
